@@ -61,6 +61,7 @@
         <style>
             body {
                 font-family: Arial, sans-serif;
+                padding: 0px
             }
 
             .container {
