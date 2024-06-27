@@ -211,114 +211,103 @@
 
     <header id="header" class="site-header">
 
-        <div class="top-info border-bottom d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <p class="fs-6 my-2 text-center">Need any help? Call us <a href="#">112233344455</a></p>
-                    </div>
-                    <div class="col-md-4 border-start border-end">
-                        <p class="fs-6 my-2 text-center">Summer sale discount off 60% off! <a class="text-decoration-underline" href="shop.html">Shop Now</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="fs-6 my-2 text-center">2-3 business days delivery & free returns</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <nav id="header-nav" class="navbar navbar-expand-lg py-3">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-            <img src="images/main-logo.png" class="logo">
-          </a>
+                <a class="navbar-brand" href="HomePage.jsp">
+                    <img src="images/main-logo.png" class="logo">
+                </a>
                 <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <svg class="navbar-icon">
-              <use xlink:href="#navbar-icon"></use>
-            </svg>
-          </button>
+                    <svg class="navbar-icon">
+                    <use xlink:href="#navbar-icon"></use>
+                    </svg>
+                </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
                     <div class="offcanvas-header px-4 pb-0">
-                        <a class="navbar-brand" href="index.html">
-                <img src="images/main-logo.png" class="logo">
-              </a>
+                        <a class="navbar-brand" href="HomePage.">
+                            <img src="images/main-logo.png" class="logo">
+                        </a>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul id="navbar" class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link me-4" href="index.html">Home</a>
+                                <a class="nav-link me-4 active" href="HomePage.jsp">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" href="about.html">About</a>
-                            </li>
+                          
                             <li class="nav-item">
                                 <a class="nav-link me-4" href="shop.html">Shop</a>
                             </li>
+                           
                             <li class="nav-item">
-                                <a class="nav-link me-4" href="blog.html">Blogs</a>
+                                 <a href="Views/admin/DashBoard.jsp" onclick="goToPage(1)">Admin</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu animate slide border">
                                     <li>
                                         <a href="about.html" class="dropdown-item fw-light">About <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
                                         <a href="shop.html" class="dropdown-item fw-light">Shop <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
                                         <a href="single-product.html" class="dropdown-item fw-light">Single Product <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
-                                        <a href="cart.html" class="dropdown-item active fw-light">Cart <span
-                          class="badge bg-primary">Pro</span></a>
+                                        <a href="cart.jsp" class="dropdown-item fw-light">Cart <span
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
                                         <a href="checkout.html" class="dropdown-item fw-light">Checkout <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
                                         <a href="blog.html" class="dropdown-item fw-light">Blog <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
                                         <a href="single-post.html" class="dropdown-item fw-light">Single Post <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
                                         <a href="contact.html" class="dropdown-item fw-light">Contact <span
-                          class="badge bg-primary">Pro</span></a>
+                                                class="badge bg-primary">Pro</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="productList.jsp" class="dropdown-item fw-light">Products List <span class="badge bg-primary">Pro</span></a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" href="contact.html">Contact</a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link text-decoration-underline me-4" href="https://templatesjungle.gumroad.com/l/bookly-bookstore-ecommerce-bootstrap-html-css-website-template" target="_blank">Get Pro</a>
                             </li>
                         </ul>
+                       
+                        
+                        
+                        
                         <div class="user-items d-flex">
                             <ul class="d-flex justify-content-end list-unstyled mb-0">
                                 <li class="search-item pe-3">
                                     <a href="#" class="search-button">
-                      <svg class="search">
-                        <use xlink:href="#search"></use>
-                      </svg>
-                    </a>
+                                        <svg class="search">
+                                        <use xlink:href="#search"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="pe-3">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      <svg class="user">
-                        <use xlink:href="#user"></use>
-                      </svg>
-                    </a>
+                                        <svg class="user">
+                                        <use xlink:href="#user"></use>
+                                        </svg>
+                                    </a>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModal" tabjsp="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header border-bottom-0">
@@ -333,6 +322,7 @@
                                                             </div>
                                                         </nav>
                                                         <div class="tab-content" id="nav-tabContent">
+                                                            <div class="tab-content" id="nav-tabContent">
                                                             <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel" aria-labelledby="nav-sign-in-tab">
                                                                 <div class="form-group py-3">
                                                                     <label class="mb-2" for="sign-in">Username or email address *</label>
@@ -343,26 +333,55 @@
                                                                     <input type="password" minlength="2" name="password" placeholder="Your Password" class="form-control w-100 rounded-3 p-3" required>
                                                                 </div>
                                                                 <label class="py-3">
-                                    <input type="checkbox" required="" class="d-inline">
-                                    <span class="label-body">Remember me</span>
-                                    <span class="label-body"><a href="#" class="fw-bold">Forgot Password</a></span>
-                                  </label>
-                                                                <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Login</button>
+                                                                    <input type="checkbox" required="" class="d-inline">
+                                                                    <span class="label-body">Remember me</span>
+                                                                    <span class="label-body"><a href="resetPasswordC.jsp" class="fw-bold">Forgot Password</a></span>
+                                                                </label>
+                                                                <a href="userProfile.jsp"><button type="submit" name="submit" class="btn btn-dark w-100 my-3">Login</button></a>
+                                                                <div class="text-center my-3">or</div>
+                                                                <button type="button" class="btn btn-dark w-100 my-3" >
+                                                                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" class="me-2"> Sign in with Google
+                                                                </button>
+                                                                <button type="button" class="btn btn-dark w-100 my-3">
+                                                                    <img src="https://img.icons8.com/color/16/000000/facebook-new.png" class="me-2"> Sign in with Facebook
+                                                                </button>
                                                             </div>
                                                             <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
                                                                 <div class="form-group py-3">
-                                                                    <label class="mb-2" for="register">Your email address *</label>
-                                                                    <input type="text" minlength="2" name="username" placeholder="Your Email Address" class="form-control w-100 rounded-3 p-3" required>
+                                                                    <label class="mb-2" for="username">Your user name *</label>
+                                                                    <input type="text" minlength="2" name="username" placeholder="Your user name" class="form-control w-100 rounded-3 p-3" required>
                                                                 </div>
+
+                                                                <div class="form-group py-3">
+                                                                    <label class="mb-2" for="account">Your account *</label>
+                                                                    <input type="text" minlength="2" name="account" placeholder="Your account" class="form-control w-100 rounded-3 p-3" required>
+                                                                </div>
+
+                                                                <div class="form-group py-3">
+                                                                    <label class="mb-2" for="email">Your email address *</label>
+                                                                    <input type="email" minlength="2" name="email" placeholder="Your email address" class="form-control w-100 rounded-3 p-3" required>
+                                                                </div>
+
+                                                                <div class="form-group py-3">
+                                                                    <label class="mb-2" for="phone">Your phone number *</label>
+                                                                    <input type="tel" minlength="2" name="phone" placeholder="Your phone number" class="form-control w-100 rounded-3 p-3" required>
+                                                                </div>
+
+                                                                <div class="form-group py-3">
+                                                                    <label class="mb-2" for="address">Your address *</label>
+                                                                    <input type="text" minlength="2" name="address" placeholder="Your address" class="form-control w-100 rounded-3 p-3" required>
+                                                                </div>
+
+                                                                <div class="form-group py-3">
+                                                                    <label class="mb-2" for="password">Password *</label>
+                                                                    <input type="password" minlength="2" name="password" placeholder="Password" class="form-control w-100 rounded-3 p-3" required>
+                                                                </div>
+
                                                                 <div class="form-group pb-3">
-                                                                    <label class="mb-2" for="sign-in">Password *</label>
-                                                                    <input type="password" minlength="2" name="password" placeholder="Your Password" class="form-control w-100 rounded-3 p-3" required>
+                                                                    <label class="mb-2" for="confirm-password">Password again *</label>
+                                                                    <input type="password" minlength="2" name="confirm-password" placeholder="Password again" class="form-control w-100 rounded-3 p-3" required>
                                                                 </div>
-                                                                <label class="py-3">
-                                    <input type="checkbox" required="" class="d-inline">
-                                    <span class="label-body">I agree to the <a href="#" class="fw-bold">Privacy
-                                        Policy</a></span>
-                                  </label>
+
                                                                 <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Register</button>
                                                             </div>
                                                         </div>
@@ -372,12 +391,13 @@
                                         </div>
                                     </div>
                                 </li>
+                                
                                 <li class="wishlist-dropdown dropdown pe-3">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      <svg class="wishlist">
-                        <use xlink:href="#heart"></use>
-                      </svg>
-                    </a>
+                                        <svg class="wishlist">
+                                        <use xlink:href="#heart"></use>
+                                        </svg>
+                                    </a>
                                     <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
                                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                                             <span class="text-primary">Your wishlist</span>
@@ -411,16 +431,16 @@
                                         </ul>
                                         <div class="d-flex flex-wrap justify-content-center">
                                             <a href="#" class="w-100 btn btn-dark mb-1" type="submit">Add all to cart</a>
-                                            <a href="cart.html" class="w-100 btn btn-primary" type="submit">View cart</a>
+                                            <a href="cart.jsp" class="w-100 btn btn-primary" type="submit">View cart</a>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="cart-dropdown dropdown">
-                                    <a href="cart.html" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      <svg class="cart">
-                        <use xlink:href="#cart"></use>
-                      </svg><span class="fs-6 fw-light">(02)</span>
-                    </a>
+                                    <a href="cart.jsp" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                        <svg class="cart">
+                                        <use xlink:href="#cart"></use>
+                                        </svg><span class="fs-6 fw-light">(02)</span>
+                                    </a>
                                     <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
                                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                                             <span class="text-primary">Your cart</span>
@@ -451,8 +471,8 @@
                                             </li>
                                         </ul>
                                         <div class="d-flex flex-wrap justify-content-center">
-                                            <a href="cart.html" class="w-100 btn btn-dark mb-1" type="submit">View Cart</a>
-                                            <a href="checkout.html" class="w-100 btn btn-primary mb-1" type="submit">Go to checkout</a>
+                                            <a href="cart.jsp" class="w-100 btn btn-dark mb-1" type="submit">View Cart</a>
+                                            <a href="CartCheckout.jsp" class="w-100 btn btn-primary mb-1" type="submit">Go to checkout</a>
                                             <a href="orderHistory.jsp" class="w-100 btn btn-primary" type="submit">Order History</a>
                                         </div>
                                     </div>

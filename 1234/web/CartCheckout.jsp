@@ -374,7 +374,7 @@ input[type="text"], input[type="email"], select, textarea {
 
         <nav id="header-nav" class="navbar navbar-expand-lg py-3">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="HomePage.jsp">
                     <img src="images/main-logo.png" class="logo">
                 </a>
                 <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -384,7 +384,7 @@ input[type="text"], input[type="email"], select, textarea {
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
                     <div class="offcanvas-header px-4 pb-0">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="HomePage.">
                             <img src="images/main-logo.png" class="logo">
                         </a>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
@@ -392,19 +392,15 @@ input[type="text"], input[type="email"], select, textarea {
                     <div class="offcanvas-body">
                         <ul id="navbar" class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link me-4 active" href="index.html">Home</a>
+                                <a class="nav-link me-4 active" href="HomePage.jsp">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" href="about.html">About</a>
-                            </li>
+                          
                             <li class="nav-item">
                                 <a class="nav-link me-4" href="shop.html">Shop</a>
                             </li>
+                           
                             <li class="nav-item">
-                                <a class="nav-link me-4" href="blog.html">Blogs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="Views/admin/DashBoard.jsp" onclick="goToPage(1)">Admin</a>
+                                 <a href="Views/admin/DashBoard.jsp" onclick="goToPage(1)">Admin</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
@@ -422,7 +418,7 @@ input[type="text"], input[type="email"], select, textarea {
                                                 class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
-                                        <a href="cart.html" class="dropdown-item fw-light">Cart <span
+                                        <a href="cart.jsp" class="dropdown-item fw-light">Cart <span
                                                 class="badge bg-primary">Pro</span></a>
                                     </li>
                                     <li>
@@ -441,13 +437,20 @@ input[type="text"], input[type="email"], select, textarea {
                                         <a href="contact.html" class="dropdown-item fw-light">Contact <span
                                                 class="badge bg-primary">Pro</span></a>
                                     </li>
+                                    <li>
+                                        <a href="productList.jsp" class="dropdown-item fw-light">Products List <span class="badge bg-primary">Pro</span></a>
+                                    </li>
                                 </ul>
                             </li>
-
+                            
                             <li class="nav-item">
                                 <a class="nav-link text-decoration-underline me-4" href="https://templatesjungle.gumroad.com/l/bookly-bookstore-ecommerce-bootstrap-html-css-website-template" target="_blank">Get Pro</a>
                             </li>
                         </ul>
+                       
+                        
+                        
+                        
                         <div class="user-items d-flex">
                             <ul class="d-flex justify-content-end list-unstyled mb-0">
                                 <li class="search-item pe-3">
@@ -464,7 +467,7 @@ input[type="text"], input[type="email"], select, textarea {
                                         </svg>
                                     </a>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModal" tabjsp="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header border-bottom-0">
@@ -479,6 +482,7 @@ input[type="text"], input[type="email"], select, textarea {
                                                             </div>
                                                         </nav>
                                                         <div class="tab-content" id="nav-tabContent">
+                                                            <div class="tab-content" id="nav-tabContent">
                                                             <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel" aria-labelledby="nav-sign-in-tab">
                                                                 <div class="form-group py-3">
                                                                     <label class="mb-2" for="sign-in">Username or email address *</label>
@@ -491,9 +495,16 @@ input[type="text"], input[type="email"], select, textarea {
                                                                 <label class="py-3">
                                                                     <input type="checkbox" required="" class="d-inline">
                                                                     <span class="label-body">Remember me</span>
-                                                                    <span class="label-body"><a href="#" class="fw-bold">Forgot Password</a></span>
+                                                                    <span class="label-body"><a href="resetPasswordC.jsp" class="fw-bold">Forgot Password</a></span>
                                                                 </label>
-                                                                <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Login</button>
+                                                                <a href="userProfile.jsp"><button type="submit" name="submit" class="btn btn-dark w-100 my-3">Login</button></a>
+                                                                <div class="text-center my-3">or</div>
+                                                                <button type="button" class="btn btn-dark w-100 my-3" >
+                                                                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" class="me-2"> Sign in with Google
+                                                                </button>
+                                                                <button type="button" class="btn btn-dark w-100 my-3">
+                                                                    <img src="https://img.icons8.com/color/16/000000/facebook-new.png" class="me-2"> Sign in with Facebook
+                                                                </button>
                                                             </div>
                                                             <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
                                                                 <div class="form-group py-3">
@@ -540,6 +551,7 @@ input[type="text"], input[type="email"], select, textarea {
                                         </div>
                                     </div>
                                 </li>
+                                
                                 <li class="wishlist-dropdown dropdown pe-3">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                         <svg class="wishlist">
@@ -579,12 +591,12 @@ input[type="text"], input[type="email"], select, textarea {
                                         </ul>
                                         <div class="d-flex flex-wrap justify-content-center">
                                             <a href="#" class="w-100 btn btn-dark mb-1" type="submit">Add all to cart</a>
-                                            <a href="cart.html" class="w-100 btn btn-primary" type="submit">View cart</a>
+                                            <a href="cart.jsp" class="w-100 btn btn-primary" type="submit">View cart</a>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="cart-dropdown dropdown">
-                                    <a href="cart.html" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                    <a href="cart.jsp" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                         <svg class="cart">
                                         <use xlink:href="#cart"></use>
                                         </svg><span class="fs-6 fw-light">(02)</span>
@@ -619,8 +631,8 @@ input[type="text"], input[type="email"], select, textarea {
                                             </li>
                                         </ul>
                                         <div class="d-flex flex-wrap justify-content-center">
-                                            <a href="cart.html" class="w-100 btn btn-dark mb-1" type="submit">View Cart</a>
-                                            <a href="checkout.html" class="w-100 btn btn-primary mb-1" type="submit">Go to checkout</a>
+                                            <a href="cart.jsp" class="w-100 btn btn-dark mb-1" type="submit">View Cart</a>
+                                            <a href="CartCheckout.jsp" class="w-100 btn btn-primary mb-1" type="submit">Go to checkout</a>
                                             <a href="orderHistory.jsp" class="w-100 btn btn-primary" type="submit">Order History</a>
                                         </div>
                                     </div>
@@ -716,7 +728,7 @@ input[type="text"], input[type="email"], select, textarea {
             </tr>
         </tbody>
     </table>
-    <button type="submit" class="right-align-button">Submit</button>
+    <button type="button" class="right-align-button" onclick="window.location.href='banking.jsp'">Submit</button>
 </form>
 
                     </div>
