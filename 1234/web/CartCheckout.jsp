@@ -384,8 +384,8 @@ input[type="text"], input[type="email"], select, textarea {
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
                     <div class="offcanvas-header px-4 pb-0">
-                        <a class="navbar-brand" href="HomePage.">
-                            <img src="images/main-logo.png" class="logo">
+                        <a class="" href="">
+                            <img src="" class="logo">
                         </a>
                         <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
                     </div>
@@ -400,51 +400,16 @@ input[type="text"], input[type="email"], select, textarea {
                             </li>
                            
                             <li class="nav-item">
-                                 <a href="Views/admin/DashBoard.jsp" onclick="goToPage(1)">Admin</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
-                                <ul class="dropdown-menu animate slide border">
-                                    <li>
-                                        <a href="about.html" class="dropdown-item fw-light">About <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html" class="dropdown-item fw-light">Shop <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product.html" class="dropdown-item fw-light">Single Product <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="cart.jsp" class="dropdown-item fw-light">Cart <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="checkout.html" class="dropdown-item fw-light">Checkout <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html" class="dropdown-item fw-light">Blog <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="single-post.html" class="dropdown-item fw-light">Single Post <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html" class="dropdown-item fw-light">Contact <span
-                                                class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="productList.jsp" class="dropdown-item fw-light">Products List <span class="badge bg-primary">Pro</span></a>
-                                    </li>
-                                </ul>
+                                <a class="nav-link me-4" href="Views/admin/DashBoard.jsp" onclick="goToPage(1)">Admin</a>
                             </li>
                             
+                            
+                            
+                            
+                            
+                            
                             <li class="nav-item">
-                                <a class="nav-link text-decoration-underline me-4" href="https://templatesjungle.gumroad.com/l/bookly-bookstore-ecommerce-bootstrap-html-css-website-template" target="_blank">Get Pro</a>
+  
                             </li>
                         </ul>
                        
