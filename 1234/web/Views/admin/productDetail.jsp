@@ -1,6 +1,6 @@
 <%-- 
-    Document   : OrderHistory
-    Created on : Jun 24, 2024, 1:03:49 AM
+    Document   : DashBoard
+    Created on : Jun 18, 2024, 12:43:15 AM
     Author     : USER
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Director | Simple Tables</title>
+        <title>Director | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <meta name="description" content="Developed By M Abdur Rokib Promy">
         <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
@@ -19,71 +19,50 @@
         <link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="${pageContext.request.contextPath}/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- google font -->
+        <!-- Morris chart -->
+        <link href="${pageContext.request.contextPath}/css/morris/morris.css" rel="stylesheet" type="text/css" />
+        <!-- jvectormap -->
+        <link href="${pageContext.request.contextPath}/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <!-- Date Picker -->
+        <link href="${pageContext.request.contextPath}/css/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+        <!-- fullCalendar -->
+        <!-- <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" /> -->
+        <!-- Daterange picker -->
+        <link href="${pageContext.request.contextPath}/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+        <!-- iCheck for checkboxes and radio inputs -->
+        <link href="${pageContext.request.contextPath}/css/iCheck/all.css" rel="stylesheet" type="text/css" />
+        <!-- bootstrap wysihtml5 - text editor -->
+        <!-- <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" /> -->
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- Theme style -->
         <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            /*        body {
+                        font-family: Arial, sans-serif;
+                    }*/
+            .chart-container {
+                width: 80%;
+                margin: auto;
+            }
+        </style>
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-        <style>
-            .select-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Màu nền của nút */
-    color: white; /* Màu chữ của nút */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px; /* Bo tròn các góc */
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+          <![endif]-->
 
-.select-button:hover {
-    background-color: #45a049; /* Màu nền khi di chuột qua */
-}
-            .box-tools {
-                display: flex;
-                align-items: center;
-                margin-bottom: 15px;
-            }
+        <style type="text/css">
 
-            .box-tools section {
-                margin-right: 10px;
-            }
-
-            .box-tools select {
-                padding: 5px;
-                font-size: 14px;
-            }
-
-            .box-tools .input-group {
-                display: flex;
-                align-items: center;
-            }
-
-            .box-tools .input-group input {
-                width: 150px;
-                padding: 5px;
-                font-size: 14px;
-            }
-
-            .box-tools .input-group button {
-                padding: 5px 10px;
-                font-size: 14px;
-            }
         </style>
     </head>
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
             <a href="index.html" class="logo">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Director
             </a>
             <!-- Header Navbar: style can be found in header.less -->
@@ -111,25 +90,26 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="img/26115.jpg" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
-                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                                 </h4>
                                                 <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</small>
                                             </a>
                                         </li><!-- end message -->
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="img/26115.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Director Design Team
-                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+
                                                 </h4>
                                                 <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> 2 hours</small>
                                             </a>
                                         </li>
                                         <li>
@@ -139,21 +119,23 @@
                                                 </div>
                                                 <h4>
                                                     Developers
-                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+
                                                 </h4>
                                                 <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> Today</small>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="img/26115.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
-                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+
                                                 </h4>
                                                 <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> Yesterday</small>
                                             </a>
                                         </li>
                                         <li>
@@ -163,9 +145,10 @@
                                                 </div>
                                                 <h4>
                                                     Reviewers
-                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+
                                                 </h4>
                                                 <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> 2 days</small>
                                             </a>
                                         </li>
                                     </ul>
@@ -179,7 +162,6 @@
                                 <span class="label label-danger">9</span>
                             </a>
                             <ul class="dropdown-menu">
-
                                 <li class="header">You have 9 tasks</li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
@@ -241,12 +223,10 @@
                                 <li class="footer">
                                     <a href="#">View all tasks</a>
                                 </li>
-
                             </ul>
                         </li>
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
-
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
                                 <span>Jane Doe <i class="caret"></i></span>
@@ -286,7 +266,6 @@
                                     <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
                                 </li>
                             </ul>
-
                         </li>
                     </ul>
                 </div>
@@ -300,7 +279,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="img/26115.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -317,166 +296,119 @@
                             </span>
                         </div>
                     </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
 
-                      <ul class="sidebar-menu">
-                       
-                      
+                    <ul class="sidebar-menu">
 
-                        <li class="active">
 
-                     <ul class="sidebar-menu">
-                     <li>
-                        <a href="DashBoard.jsp">
-                            <i class="fa fa-dashboard"></i> <span>Dash board</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="AccountListManagement.jsp">
-                            <i class="fa fa-dashboard"></i> <span>Account Manager</span>
-                        </a>
-                    </li>
-                    
-                    <li>
 
-                            <a href="OrderList.jsp">
-                                <i class="fa fa-glass"></i> <span>Manage Order</span>
-                            </a>
-                        </li>
-                        <li>
+
+                        <li >
+
+                            <ul class="sidebar-menu">
+                                <li>
+                                    <a href="DashBoard.jsp">
+                                        <i class="fa fa-dashboard"></i> <span>Dash board </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="AccountListManagement.jsp">
+                                        <i class="fa fa-dashboard"></i> <span>Account Manager</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="OrderList.jsp">
+                                        <i class="fa fa-glass"></i> <span>Manage Order</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="productList.jsp">
                                         <i class="fa fa-glass"></i> <span>Manage Product</span>
                                     </a>
                                 </li>
-                </ul>
+
+                            </ul>
+
+                    </ul>
+
                 </section>
                 <!-- /.sidebar -->
             </aside>
 
-            <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
-
-                <!-- Main content -->
                 <section class="content">
-                    <div class="row">
+        <h2>Product Detail</h2>
+<form action="updateProduct" method="post">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" value="Product A" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" value="Product A" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="1,200" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" value="20" class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" value="Category A" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="createdAt">Create At:</label>
+        <input type="date" id="createdAt" name="createdAt" value="2024-06-10" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Status:</label>
+        <div class="status-group">
+          <input type="radio" id="inStock" name="status" value="In Stock" checked class="status-input">
+          <label class="status-label" for="inStock">In Stock</label>
+          <input type="radio" id="outOfStock" name="status" value="Out of Stock" class="status-input">
+          <label class="status-label" for="outOfStock">Out of Stock</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container-right">
+    <a href="productList.jsp" class="btn btn-default button-right">Cancel</a>
+    <a href="productList.jsp" class="btn btn-success button-right">Save</a>
+  </div>
+</form>
 
+    </section>
 
-                        <header class="panel-heading">
-                            Product Select
-
-                        </header>
-                        <!-- <div class="box-header"> -->
-                        <!-- <h3 class="box-title">Responsive Hover Table</h3> -->
-
-                        <!-- </div> -->
-                        <div class="panel-body table-responsive">
-                            <div class="box-tools m-b-15">
-                                
-                                <section>
-                                    <select>
-                                        <option>All Product</option>
-                                        <option>A-Z</option>
-                                        <option>Z-A</option>
-                                      
-                                    </select>
-                                </section>
-                              
-                                <div class="input-group">
-                                    <input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Search"/>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-                                    </div>
-                                </div>
-                             
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <table class="table table-hover">
-                        <tr>
-                            <th>Product ID</th>
-                            <th>Product Name</th>
-                            <th>Quantity in stock </th>
-                            
-                            <th>Price</th>
-                            <th>Quantity </th>
-                          
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td>183</td>
-                            <td>Product 1</td>
-                            <td>20</td>
-                          
-                            <td>1.094.748đ</td>
-                            
-                             <td><input type="number" value="1"></td>
-                         
-                            <td><a href="#">Select</a></td>
-                        </tr>
-                        <tr>
-                           <td>183</td>
-                            <td>Product 1</td>
-                            <td>20</td>
-                          
-                            <td>1.094.748đ</td>
-                            
-                             <td><input type="number" value="1"></td>
-                         
-                            <td><a href="#">Select</a></td>
-                        </tr>
-                        <tr>
-                           <td>183</td>
-                            <td>Product 1</td>
-                            <td>20</td>
-                          
-                            <td>1.094.748đ</td>
-                            
-                             <td><input type="number" value="1"></td>
-                         
-                            <td><a href="#">Select</a></td>
-                        </tr>
-                        <tr>
-                          <td>183</td>
-                            <td>Product 1</td>
-                            <td>20</td>
-                          
-                            <td>1.094.748đ</td>
-                            
-                             <td><input type="number" value="1"></td>
-                         
-                            <td><a href="#">Select</a></td>
-                        </tr>
-                    </table>
-                            <td><a href="NewOrder.jsp" class="select-button">Select</a></td>
-                    <div class="table-foot">
-                        <ul class="pagination pagination-sm no-margin pull-right">
-                            <li><a href="#">&laquo;</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">&raquo;</a></li>
-                        </ul>
-                    </div>
-                    </div><!-- /.box-body -->
-                    </div><!-- /.box -->
-                    </div>
-                    </div>
-                </section><!-- /.content -->
                 <div class="footer-main">
-                    ShopBook88
+                    Copyright &copy Director, 2014
                 </div>
             </aside><!-- /.right-side -->
+
         </div><!-- ./wrapper -->
 
 
-        <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/jquery.min.js" type="text/javascript"></script>
 
-        <!-- Bootstrap -->
-        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- Director App -->
-        <script src="${pageContext.request.contextPath}/js/Director/app.js" type="text/javascript"></script>
+        <script>
+            function goToPage(PageNumber) {
+                // Thực hiện các hành động cần thiết khi chuyển đến trang pageNumber
+                // Ví dụ: chuyển đến URL mới, gọi hàm để load dữ liệu mới, ...
+                window.location.href = "your_new_page.jsp?page=" + pageNumber;
+                // Ví dụ: window.location.href = "your_new_page.jsp?page=" + pageNumber;
+            }
+        </script>
     </body>
-</html>
 
+</html>

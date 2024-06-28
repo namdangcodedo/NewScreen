@@ -411,7 +411,11 @@
                                 <i class="fa fa-glass"></i> <span>Manage Order</span>
                             </a>
                         </li>
-
+<li>
+                                    <a href="productList.jsp">
+                                        <i class="fa fa-glass"></i> <span>Manage Product</span>
+                                    </a>
+                                </li>
 
                     </ul>
 
