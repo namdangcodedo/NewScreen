@@ -499,64 +499,98 @@
 
     </header>
 
-    <section class="position-relative padding-large ">
-        <h2>My Order Details</h2>
+   <section class="container p-4">
+    <h2>My Order Details</h2>
 
-        <div class="order-details">
-            <div class="section margin-medium">
-                <h3>Order Information</h3>
-                <p><label>Order ID:</label> <input type="text" id="orderID" value="001" readonly></p>
-                <p><label>Order Date:</label> <input type="date" id="orderDate" value="2024-06-10"></p>
-                <p><label>Status:</label> <input type="text" id="status" value="Pending"></p>
+    <div class="order-details">
+        <div class="row">
+            <div class="section col-md-6">
+            <h3>Order Information</h3>
+            <div class="form-group">
+                <label for="orderID">Order ID:</label>
+                <input type="text" class="form-control" id="orderID" value="001" readonly>
             </div>
-            <div class="section margin-medium">
-                <h3>Customer Information</h3>
-                <p><label>Customer Name:</label> <input type="text" id="customerName" value="Van A"></p>
-                <p><label>Customer Email:</label> <input type="email" id="customerEmail" value="vana@gmail.com"></p>
-                <p><label>Customer Phone:</label> <input type="tel" id="customerPhone" value="0987654321"></p>
-                <p><label>Shipping Address:</label> <input type="text" id="shippingAddress" value="123 Main St, Springfield, IL 62701"></p>
+            <div class="form-group">
+                <label for="orderDate">Order Date:</label>
+                <input type="date" class="form-control" id="orderDate" value="2024-06-10">
             </div>
-            <div class="section margin-medium">
-                <h3>Product Details</h3>
-                <table class="product-table margin-medium">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Product A</td>
-                            <td>2,200</td>
-                            <td>2</td>
-                            <td>4,400</td>
-                        </tr>
-                        <!-- Additional rows can be added here -->
-                    </tbody>
-                </table>
-            </div>
-            <div class="section margin-medium">
-                <h3>Payment Information</h3>
-                <div class="total-container margin-medium">
-                    <p><label>Subtotal:</label> 4,400</p>
-                    <p><label>Shipping:</label> 200</p>
-                    <p><label>Total:</label> 4,600</p>
-                </div>
-                <div class="payment-image">
-                    <img src="images/de.png" alt="Payment Information Image">
-                </div>
-            </div>
-            <div class="button-container margin-medium">
-                <a href="orderHistory.jsp" class="btn">Update</a>
-                <a href="orderHistory.jsp" class="btn">Cancel</a>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <input type="text" class="form-control" id="status" value="Pending">
             </div>
         </div>
-    </section>
+        
+        <div class="section col-md-6">
+            <h3>Customer Information</h3>
+            <div class="form-group">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" class="form-control" id="customerName" value="Van A">
+            </div>
+            <div class="form-group">
+                <label for="customerEmail">Customer Email:</label>
+                <input type="email" class="form-control" id="customerEmail" value="vana@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="customerPhone">Customer Phone:</label>
+                <input type="tel" class="form-control" id="customerPhone" value="0987654321">
+            </div>
+            <div class="form-group">
+                <label for="shippingAddress">Shipping Address:</label>
+                <input type="text" class="form-control" id="shippingAddress" value="123 Main St, Springfield, IL 62701">
+            </div>
+        </div>
+        </div>
+        
+        <div class="row mb-4">
+            
+        
+        <div class="section col-md-6">
+            <h3>Product Details</h3>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th style="font-weight: bold;">ID</th>
+                        <th style="font-weight: bold;">Product Name</th>
+                        <th style="font-weight: bold;">Price</th>
+                        <th style="font-weight: bold;">Quantity</th>
+                        <th style="font-weight: bold;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Product A</td>
+                        <td>2,200</td>
+                        <td>2</td>
+                        <td>4,400</td>
+                    </tr>
+                    <!-- Additional rows can be added here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section col-md-6">
+            <h3>Payment Information</h3>
+            <div class="total-container">
+                <p><label>Subtotal:</label> 4,400</p>
+                <p><label>Shipping:</label> 200</p>
+                <p><label>Total:</label> 4,600</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="section mb-4">
+             <div class="payment-image">
+                <img src="images/de.png" alt="Payment Information Image" class="img-fluid">
+            </div>
+        </div>
+        
+        <div class="button-container mb-4">
+            <a href="orderHistory.jsp" class="btn btn-primary">Update</a>
+            <a href="orderHistory.jsp" class="btn btn-danger">Cancel</a>
+        </div>
+    </div>
+</section>
 
 
 

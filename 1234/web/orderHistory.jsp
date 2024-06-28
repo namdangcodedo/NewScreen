@@ -499,36 +499,39 @@
 
     </header>
 
-    <section class="position-relative padding-large ">
+    <section class="container">
         <h2>Order History</h2>
 
-        <div class="search-container margin-medium">
-            <input type="text" id="searchInput" placeholder="Search for orders..">
-            <button class="btn">Search</button>
+         <div class="input-group mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search for orders..">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
         </div>
-        <div class="margin-medium">
-            <select id="statusSelect">
-                <option value="" disabled selected>All Status</option>
-                <option value="pending">Pending</option>
-                <option value="shipped">Shipped</option>
-                <option value="delivered">Delivered</option>
-                <option value="cancelled">Cancelled</option>
-            </select>
-            <button class="btn">Filter</button>
-        </div>
+    </div>
 
-        <table class="margin-medium">
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Receiver</th>
-                    <th>Email</th>
-                    <th>Mobile</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+         <div class="mb-3">
+        <select id="statusSelect" class="custom-select w-auto d-inline-block">
+            <option value="" disabled selected>All Status</option>
+            <option value="pending">Pending</option>
+            <option value="shipped">Shipped</option>
+            <option value="delivered">Delivered</option>
+            <option value="cancelled">Cancelled</option>
+        </select>
+        <button class="btn btn-outline-secondary ml-2" type="button">Filter</button>
+    </div>
+
+    <table class="table table-bordered table-hover">
+              <thead class="thead-light">
+            <tr>
+                <th style="font-weight: bold;">Order ID</th>
+                <th style="font-weight: bold;">Receiver</th>
+                <th style="font-weight: bold;">Email</th>
+                <th style="font-weight: bold;">Mobile</th>
+                <th style="font-weight: bold;">Amount</th>
+                <th style="font-weight: bold;">Status</th>
+                <th style="font-weight: bold;">Action</th>
+            </tr>
+        </thead>
             <tbody id="orderTable">
                 <tr>
                     <td>001</td>
